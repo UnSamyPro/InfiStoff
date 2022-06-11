@@ -13,7 +13,7 @@ Wenn Daten in mehreren Tabellen liegen, kann man mithilfe eines *Inner Join* aus
 Theoretisch kann man einen *Inner Join* auch nur mit einer *Where* Abfrage machen.
 
 ```SQL
-    SELECT *
+    SELECT Auto.Modell, Fahrer.Vorname
     FROM Auto, Fahrer
     WHERE Auto.ID = Fahrer.ID;
 ```
@@ -24,7 +24,7 @@ Theoretisch kann man einen *Inner Join* auch nur mit einer *Where* Abfrage mache
 Der Alias macht es möglich kürzere Namen zu vergeben. Das ist praktisch wenn man ein langes *Select* hat.
 
 ```SQL
-    SELECT *
+    SELECT a.Modell, f.Vorname
     FROM Auto a, Fahrer f
     WHERE a.ID = f.ID;
 ```
@@ -35,7 +35,7 @@ Der Alias macht es möglich kürzere Namen zu vergeben. Das ist praktisch wenn m
 Der *richtige* Inner Join so wie man ihn normal macht.
 
 ```SQL
-    SELECT *
+    SELECT a.Modell, f.Vorname
     FROM Auto a
     INNER JOIN Fahrer f ON a.ID = f.ID;
 ```
